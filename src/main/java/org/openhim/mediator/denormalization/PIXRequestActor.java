@@ -133,10 +133,6 @@ public class PIXRequestActor extends UntypedActor {
         t.set("EVN-2", dateFormatDay.format(new Date()));
 
         for (Identifier id : msg.getPatientIdentifiers()) {
-
-            log.info("DERIVED GLOBAL IDENTIFIER : " + id.getIdentifier() + " and " + id.getAssigningAuthority().getAssigningAuthority()
-            + " and " + id.getAssigningAuthority().getAssigningAuthorityId() + " and " + id.getAssigningAuthority().getAssigningAuthorityIdType());
-
             t.set("PID-3-1", id.getIdentifier());
             t.set("PID-3-4", id.getAssigningAuthority().getAssigningAuthority());
             t.set("PID-3-4-2", id.getAssigningAuthority().getAssigningAuthorityId());
