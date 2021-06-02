@@ -7,7 +7,7 @@
     {
       "name": "MPI-XDS Sync Mediator",
       "host": "localhost",
-      "port": "4900",
+      "port": "4800",
       "type": "http"
     }
   ],
@@ -21,7 +21,7 @@
         {
           "name": "JSON-PIX Sync Route",
           "host": "localhost",
-          "port": "4900",
+          "port": "4800",
           "type": "http",
           "primary": "true"
         }

@@ -1,0 +1,31 @@
+{
+  "urn": "urn:mediator:mpixds-sync",
+  "version": "1.0.0",
+  "name": "MPI-XDS Sync Mediator",
+  "description": "MPI to XDS Registry (Add & Update) Sync Mediator",
+  "endpoints": [
+    {
+      "name": "MPI-XDS Sync Mediator",
+      "host": "localhost",
+      "port": "4800",
+      "type": "http"
+    }
+  ],
+  "defaultChannelConfig": [
+    {
+      "name": "JSON-PIX Sync Mediator",
+      "urlPattern": "^/mpixds-sync",
+      "type": "http",
+      "allow": ["pixpdqrole"],
+      "routes": [
+        {
+          "name": "JSON-PIX Sync Route",
+          "host": "localhost",
+          "port": "4800",
+          "type": "http",
+          "primary": "true"
+        }
+      ]
+    }
+  ]
+}
