@@ -25,3 +25,19 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Where am I
       run: pwd
+      
+    - name: Push production code to release repo
+      run: |
+             cd /home/runner/work/openhim-mpisync-mediator/openhim-mpisync-mediator/target
+             git config --global user.email "seeisoleqelat@gmail.com"
+             git config --global user.name "leqela-prog"
+             git init
+             git remote add origin https://github.com/leqela-prog/openhim-mpisync-release.git
+             git add .
+             git commit -m "changes to openhim mpi sync mediator"
+             git push -f github openhim-mpisync-release.git
+      
+      
+      
+      
+      
