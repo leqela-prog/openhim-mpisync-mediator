@@ -33,9 +33,9 @@ jobs:
              git config --global user.name "leqela-prog"
              git config --global init.defaultBranch openhim-mpisync-release
              git branch -m openhim-mpisync-release
-             git add .
+             git add mediator-mpixds-sync-1.0.0-jar-with-dependencies.jar
              git commit -m "changes to openhim mpi sync mediator"
-             git push -f github openhim-mpisync-release.git
+             git push -f github openhim-mpisync-release
       
       
       
