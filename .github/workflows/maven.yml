@@ -35,7 +35,7 @@ jobs:
              git branch -m openhim-mpisync-release
              git add mediator-mpixds-sync-1.0.0-jar-with-dependencies.jar
              git commit -m "changes to openhim mpi sync mediator"
-             git push 
+             git push origin HEAD:master
       
       
       
