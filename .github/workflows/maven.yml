@@ -31,8 +31,8 @@ jobs:
              cd /home/runner/work/openhim-mpisync-mediator/openhim-mpisync-mediator/target
              git config --global user.email "seeisoleqelat@gmail.com"
              git config --global user.name "leqela-prog"
-             git init
-             git remote add origin https://github.com/leqela-prog/openhim-mpisync-release.git
+             git config --global init.defaultBranch openhim-mpisync-release
+             git branch -m openhim-mpisync-release
              git add .
              git commit -m "changes to openhim mpi sync mediator"
              git push -f github openhim-mpisync-release.git
