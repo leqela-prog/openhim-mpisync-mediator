@@ -31,11 +31,11 @@ jobs:
              cd /home/runner/work/openhim-mpisync-mediator/openhim-mpisync-mediator/target
              git config --global user.email "seeisoleqelat@gmail.com"
              git config --global user.name "leqela-prog"
-             git config --global init.defaultBranch openhim-mpisync-release
-             git branch -m openhim-mpisync-release
+             git config --global init.defaultBranch openhim-mpisync-release_v1
+             git branch -m openhim-mpisync-release_v1
              git add mediator-mpixds-sync-1.0.0-jar-with-dependencies.jar
              git commit -m "changes to openhim mpi sync mediator"
-             git push --set-upstream origin openhim-mpisync-release
+             git push --set-upstream origin openhim-mpisync-release_v1
       
       
       
