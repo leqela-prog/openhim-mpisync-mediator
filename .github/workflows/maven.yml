@@ -22,20 +22,14 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
-    - name: Where am I
-      run: pwd
+      run: mvn --batch-mode --update-snapshots verify
+    - run: mkdir staging && cp target/*.jar staging
+    - uses: actions/upload-artifact@v2
+      with:
+       name: Package
+       path: staging
+    
       
-    - name: Push production code to release repo
-      run: |
-             cd /home/runner/work/openhim-mpisync-mediator/openhim-mpisync-mediator/target
-             git config --global user.email "seeisoleqelat@gmail.com"
-             git config --global user.name "leqela-prog"
-             git config --global init.defaultBranch openhim-mpisync-release_v1
-             git branch -m openhim-mpisync-release_v1
-             git add mediator-mpixds-sync-1.0.0-jar-with-dependencies.jar
-             git commit -m "changes to openhim mpi sync mediator"
-             git push --set-upstream origin openhim-mpisync-release_v1
       
       
       
