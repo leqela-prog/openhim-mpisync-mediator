@@ -27,6 +27,10 @@ jobs:
     
     - name: Where am I
       run: pwd
+      
+    - name: Changing directory to home  hosted runner
+    - run: cd /home/runner/work/
+    - run: pwd
     - uses: actions/upload-artifact@v2
       with:
        name: Package
