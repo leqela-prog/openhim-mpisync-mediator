@@ -30,9 +30,6 @@ jobs:
       
     - name: Changing directory to home  hosted runner
       run: cd /home/runner/work/
-      
-    - name: Where am I
-      run: pwd
     
     - uses: actions/upload-artifact@v2
       with:
